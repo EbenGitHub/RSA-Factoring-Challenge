@@ -1,0 +1,11 @@
+#!bin/user/python3
+
+num = int(input(" "))
+while True:
+    for i in range(num):
+        if i > 1:
+            if num % i == 0:
+                j = round(num / i)
+                print(f"{num}={i}*{j}")
+                exit(0)
+            
