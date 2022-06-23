@@ -1,11 +1,14 @@
-#!bin/user/python3
+#!user/bin/python3
+#import sys
 
-num = int(input(" "))
+i = 2
+f = open(sys.argv[1], 'r')
 while True:
-    for i in range(num):
-        if i > 1:
-            if num % i == 0:
-                j = round(num / i)
-                print(f"{num}={i}*{j}")
-                exit(0)
-            
+    for line in f:
+        if line % i == 0:
+            j = round(line / i)
+            print(f"{num}={i}*{j}")
+            break
+        if i == round(line/2) - 1:
+            break
+        i += 1
